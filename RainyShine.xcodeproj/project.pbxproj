@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02BEC5446FDE338056D8F905 /* Pods_RainyShine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDC0E5EC2CB77E62A29304A /* Pods_RainyShine.framework */; };
+		2117D3E720AE310200BFA79E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117D3E620AE310200BFA79E /* Constants.swift */; };
+		2117D3E920AE347C00BFA79E /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117D3E820AE347C00BFA79E /* CurrentWeather.swift */; };
 		21FEB75020AD817D00AEA33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEB74F20AD817D00AEA33C /* AppDelegate.swift */; };
 		21FEB75220AD817D00AEA33C /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEB75120AD817D00AEA33C /* WeatherVC.swift */; };
 		21FEB75520AD817D00AEA33C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FEB75320AD817D00AEA33C /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		0DBE92269F84BEB3526E54C7 /* Pods-RainyShine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainyShine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainyShine/Pods-RainyShine.debug.xcconfig"; sourceTree = "<group>"; };
+		2117D3E620AE310200BFA79E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2117D3E820AE347C00BFA79E /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		21FEB74C20AD817D00AEA33C /* RainyShine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainyShine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FEB74F20AD817D00AEA33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21FEB75120AD817D00AEA33C /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				21FEB75620AD817D00AEA33C /* Assets.xcassets */,
 				21FEB75820AD817D00AEA33C /* LaunchScreen.storyboard */,
 				21FEB75B20AD817D00AEA33C /* Info.plist */,
+				2117D3E620AE310200BFA79E /* Constants.swift */,
+				2117D3E820AE347C00BFA79E /* CurrentWeather.swift */,
 			);
 			path = RainyShine;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			files = (
 				21FEB75220AD817D00AEA33C /* WeatherVC.swift in Sources */,
 				21FEB75020AD817D00AEA33C /* AppDelegate.swift in Sources */,
+				2117D3E920AE347C00BFA79E /* CurrentWeather.swift in Sources */,
+				2117D3E720AE310200BFA79E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
