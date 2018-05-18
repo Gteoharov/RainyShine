@@ -9,11 +9,13 @@
 import Foundation
 import Alamofire
 
+
 class CurrentWeather {
     var _cityName: String!
     var _date: String!
     var _weatherType: String!
     var _currentWeather: Double!
+    
     
     var cityName: String {
         if _cityName == nil {
@@ -49,12 +51,30 @@ class CurrentWeather {
         return _currentWeather
     }
     
-    func downloadWeatherDetails(completed: DownloadComplete) {
+    func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         // Alomafire download
         let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
         Alamofire.request(currentWeatherURL).responseJSON { response in
             let result = response.result
-            print(response)
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let name = dict["name"] as? String {
+                    self._cityName = name.capitalized
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
+                
+                    if let main = weather[0]["main"] as? String {
+                        self._weatherType = main.capitalized
+                    }
+                }
+                
+//                if let main = dict["main"] as? [Dictionary<String, AnyObject>] {
+//
+//
+//                }
+                
+            }
         }
         completed()
     }
