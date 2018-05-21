@@ -69,10 +69,11 @@ class CurrentWeather {
                     }
                 }
                 
-//                if let main = dict["main"] as? [Dictionary<String, AnyObject>] {
-//
-//
-//                }
+                if let main = dict["main"] as? Dictionary<String, AnyObject> {
+                    if let currentTemperature = main["temp"] as? Double {
+                        
+                    }
+                }
                 
             }
         }
