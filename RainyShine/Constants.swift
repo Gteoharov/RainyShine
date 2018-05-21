@@ -16,7 +16,7 @@ let API_KEY = "e93a856cfda88ece497b68d57bf53f72"
 
 typealias DownloadComplete = () -> ()
 
-let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)35\(LONGITUDE)139\(API_ID)\(API_KEY)"
+let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)-36\(LONGITUDE)139\(API_ID)\(API_KEY)"
 
 
 
