@@ -28,15 +28,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         
         currentWeather = CurrentWeather()
-        forecast = Forecast()
         currentWeather.downloadWeatherDetails {
-            // Update UI
-            self.updateUI()
+            self.downloadForecastData {
+                self.updateUI()
+            }
         }
         
     }
     
-    func downloadForecastData(completed: DownloadComplete) {
+    func downloadForecastData(completed: @escaping DownloadComplete) {
         // Downloading forecast weather data for TableView
         let forecastURL = URL(string: FORECAST_URL)!
         Alamofire.request(forecastURL).responseJSON { response in
@@ -46,11 +46,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
                     
                     for obj in list {
-                        let forecast = Forecast(weather: obj)
+                        let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
+                        print(obj)
                     }
                 }
             }
+            completed()
         }
     }
     
@@ -59,7 +61,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
