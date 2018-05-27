@@ -86,7 +86,15 @@ class Forecast {
         if let dateTime = weatherDict["dt_txt"] as? String {
             let main = dateTime.components(separatedBy: " ")
             let splitTime = main[1]
-            self._timeHours = splitTime
+            var convertedTime: String = ""
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH-mm-ss"
+            let newDateFormatter = DateFormatter()
+            newDateFormatter.dateFormat = "h a"
+            if let time = dateFormatter.date(from: splitTime) {
+                convertedTime = newDateFormatter.string(from: time)
+            }
+            self._timeHours = convertedTime
         }
     }
 }
