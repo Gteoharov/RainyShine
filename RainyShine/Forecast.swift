@@ -14,6 +14,7 @@ class Forecast {
     var _weatherType: String!
     var _highTemp: String!
     var _lowTemp: String!
+    var _timeHours: String!
     
     var date: String {
         if _date == nil {
@@ -41,6 +42,13 @@ class Forecast {
             _lowTemp = ""
         }
         return _lowTemp
+    }
+    
+    var timeHours: String {
+        if _timeHours == nil {
+            _timeHours = ""
+        }
+        return _timeHours
     }
     
     init(weatherDict: Dictionary<String, AnyObject>) {
@@ -74,6 +82,12 @@ class Forecast {
             self._date = unixConverterDate.dayOfTheWeek()
             
         }
+        
+        if let dateTime = weatherDict["dt_txt"] as? String {
+            let main = dateTime.components(separatedBy: " ")
+            let splitTime = main[1]
+            self._timeHours = splitTime
+        }
     }
 }
 
@@ -81,6 +95,11 @@ extension Date {
     func dayOfTheWeek() -> String {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "EEEE"
+        return dateFormater.string(from: self)
+    }
+    func timeHours() -> String {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "HH"
         return dateFormater.string(from: self)
     }
 }

@@ -15,6 +15,7 @@ class CurrentWeather {
     var _date: String!
     var _weatherType: String!
     var _currentWeather: Double!
+    var _timeHours: String!
     
     
     var cityName: String {
