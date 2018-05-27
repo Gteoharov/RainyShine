@@ -80,14 +80,14 @@
                                 <rect key="frame" x="0.0" y="350" width="375" height="462"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="9lG-hO-85e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="9lG-hO-85e" customClass="WeatherCell" customModule="RainyShine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9lG-hO-85e" id="2z9-qg-vUi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XWP-1g-B6k">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XWP-1g-B6k">
                                                     <rect key="frame" x="25" y="19" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="dbt-EW-Enn"/>
@@ -148,6 +148,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="xyI-6T-YCX" id="3SE-im-dhy"/>
+                                            <outlet property="highTemp" destination="2vF-ky-bD6" id="6se-70-nnK"/>
+                                            <outlet property="lowTemp" destination="g8S-aX-b1m" id="qEE-cg-PEn"/>
+                                            <outlet property="weatherIcon" destination="XWP-1g-B6k" id="0z1-HS-9BR"/>
+                                            <outlet property="weatherType" destination="g2S-mh-syK" id="B7q-kg-q2S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
