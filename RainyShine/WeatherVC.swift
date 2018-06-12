@@ -19,6 +19,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var currentWeatherLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
@@ -44,6 +45,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         locationAutStatus()
+        UIView.animate(withDuration: 0.1, animations: {
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+            rotationAnimation.fromValue = 0.0
+            rotationAnimation.toValue = Double.pi * 2
+            rotationAnimation.duration = 3
+            rotationAnimation.repeatCount = 5
+            self.currentWeatherImage.layer.add(rotationAnimation, forKey: "rotation")
+        })
+        
     }
     
     func locationAutStatus() {
