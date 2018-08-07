@@ -97,6 +97,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		217557E22119AAB7005F9E8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21FEB75120AD817D00AEA33C /* WeatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		217557E32119AAD6005F9E8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21E2F53E20B959DA009681EF /* WeatherCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		217557E42119AE57005F9E8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2117D3E620AE310200BFA79E /* Constants.swift */,
+				2117D3E820AE347C00BFA79E /* CurrentWeather.swift */,
+				2181028D20B3FB79009C468E /* Forecast.swift */,
+				21570AB620BB4C1500B37A70 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		21FEB74320AD817D00AEA33C = {
 			isa = PBXGroup;
 			children = (
@@ -123,16 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				21FEB74F20AD817D00AEA33C /* AppDelegate.swift */,
-				21FEB75120AD817D00AEA33C /* WeatherVC.swift */,
+				217557E32119AAD6005F9E8D /* View */,
+				217557E22119AAB7005F9E8D /* Controller */,
+				217557E42119AE57005F9E8D /* Model */,
 				21FEB75320AD817D00AEA33C /* Main.storyboard */,
 				21FEB75620AD817D00AEA33C /* Assets.xcassets */,
 				21FEB75820AD817D00AEA33C /* LaunchScreen.storyboard */,
 				21FEB75B20AD817D00AEA33C /* Info.plist */,
-				2117D3E620AE310200BFA79E /* Constants.swift */,
-				2117D3E820AE347C00BFA79E /* CurrentWeather.swift */,
-				2181028D20B3FB79009C468E /* Forecast.swift */,
-				21E2F53E20B959DA009681EF /* WeatherCell.swift */,
-				21570AB620BB4C1500B37A70 /* Location.swift */,
 			);
 			path = RainyShine;
 			sourceTree = "<group>";
